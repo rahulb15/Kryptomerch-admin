@@ -1,0 +1,25 @@
+.approvebtn {
+    border: 1px solid #000000 !important;
+    border-radius: 6px !important;
+    width: 120px !important;
+    background: #fff !important;
+    height: 32px !important;
+    color: #000000 !important;
+    font-size: 15px !important;
+
+    &:hover {
+        background: #E0E21A !important;
+        border: #E0E21A solid 1px !important;
+    }
+}
+
+.contri {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    small {
+        color: #727272;
+        font-size: 15px;
+    }
+}

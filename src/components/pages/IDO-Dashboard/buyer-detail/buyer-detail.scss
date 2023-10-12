@@ -1,0 +1,115 @@
+.buyerDetailBx {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.buyerBalBx {
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .buyerBal_Left {
+        .tokBalBx {
+            display: inline-block;
+            min-width: 270px;
+
+            span {
+                display: block;
+                font-size: 16px;
+                color: #999;
+                padding-bottom: 5px;
+            }
+
+            strong {
+                font-size: 20px;
+                font-weight: 500;
+                display: block;
+            }
+
+            button {
+                width: 100px;
+                height: 35px;
+                background: #309C5A;
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+
+    .buyermailBx {
+        span {
+            display: inline-block;
+            padding-right: 10px;
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+
+            svg {
+                color: #309C5A;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.backBtn {
+    background: #efefef;
+    width: 100px;
+    line-height: 45px;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+.userInfBx {
+    padding-bottom: 20px;
+
+    h4 {
+        font-size: 16px;
+        padding-bottom: 5px;
+        font-weight: 500;
+    }
+
+    .userinfList {
+        border: #e6e6e6 solid 1px;
+
+        table {
+            width: 100%;
+
+            tr {
+                td {
+                    border-left: #e6e6e6 solid 1px;
+                    border-bottom: #e6e6e6 solid 1px;
+                    padding: 10px 15px;
+                    font-size: 15px;
+
+                    &:nth-child(1) {
+                        border-bottom: 0;
+                        width: 250px;
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}

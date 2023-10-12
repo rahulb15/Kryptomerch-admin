@@ -1,0 +1,28 @@
+.dontsend {
+    padding-top: 20px;
+    color: #000;
+
+    a {
+        color: #000;
+
+        &:hover {
+            color: #0099ff;
+        }
+    }
+}
+
+.backBtn {
+    text-align: center;
+    padding-top: 25px;
+
+    a {
+        color: #616161;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+}

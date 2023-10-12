@@ -1,0 +1,76 @@
+.buyerdetOuter {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    .buyerBalBx {
+        margin-bottom: 0;
+
+        .creatfltBx {
+            display: inline-block;
+            margin-right: 40px;
+            vertical-align: middle;
+
+            span {
+                display: block;
+                font-size: 16px;
+                color: #777;
+                padding-bottom: 5px;
+            }
+
+            strong {
+                display: block;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            button {
+                width: 100px;
+                height: 35px;
+                background: #309C5A;
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+
+}
+
+.createTab {
+    position: relative;
+
+    .buyersFlt {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.createTab {
+    ul.nav.nav-tabs {
+        margin-bottom: 20px;
+        background: #fff;
+        border: 1px solid #D9D9D9;
+        border-radius: 6px;
+        padding: 5px;
+        display: inline-block;
+
+        li.nav-item {
+            display: inline-block;
+
+            a.nav-link {
+                font-size: 15px;
+                color: #787878;
+                padding: 5px 20px;
+                border: 0;
+            }
+
+            a.active.nav-link {
+                background: #000;
+                color: #fff;
+                border: 0;
+                border-radius: 6px;
+            }
+        }
+    }
+}

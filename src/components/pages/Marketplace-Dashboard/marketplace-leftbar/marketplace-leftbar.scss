@@ -1,0 +1,39 @@
+.leftbar {
+    position: fixed;
+    left: 0;
+    top: 71px;
+    background: #fff;
+    width: 250px;
+    bottom: 0;
+
+    .nav {
+        display: block;
+
+        li.nav-item {
+            a {
+                padding: 15px 40px;
+                line-height: 40px;
+                display: block;
+                color: #646464;
+                border-left: transparent solid 2px;
+                font-size: 16px;
+                line-height: 30px;
+
+                svg {
+                    font-size: 20px;
+                    line-height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+
+                &:hover,
+                &.active {
+                    background: #efefef;
+                    color: #000;
+                    border-left: #000 solid 2px;
+                }
+            }
+        }
+    }
+}

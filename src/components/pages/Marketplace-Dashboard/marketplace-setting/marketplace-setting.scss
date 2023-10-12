@@ -1,0 +1,41 @@
+.changepassBx {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 6px;
+
+    .changepassInn {
+        max-width: 500px;
+    }
+}
+
+.passnote {
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #777;
+}
+
+.updateBtn {
+    button {
+        width: 120px;
+        height: 45px;
+        background: #000;
+        color: #fff;
+        border: #000 solid 1px;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+            background: #E0E21A;
+            color: #000;
+            border: #E0E21A solid 1px;
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 10px;
+}
