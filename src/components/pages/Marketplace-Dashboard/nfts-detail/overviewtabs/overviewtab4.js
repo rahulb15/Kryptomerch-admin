@@ -4,7 +4,6 @@ import CollectImg2 from '../../../../../assets/images/collection-img2.png'
 import CollectImg3 from '../../../../../assets/images/collection-img3.png'
 import CollectImg4 from '../../../../../assets/images/collection-img4.png'
 import CollectImg5 from '../../../../../assets/images/collection-img5.png'
-//import CollectImg6 from '../../../../../assets/images/collection-img6.png'
 
 export default class OverviewTab1 extends Component {
     render() {

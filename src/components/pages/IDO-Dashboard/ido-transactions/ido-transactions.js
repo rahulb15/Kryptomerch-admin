@@ -1,12 +1,12 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./ido-transactions.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-import { FaFilter } from "react-icons/fa"
-import TransactionsTable from "./transactions-table"
-import Pagination from "../../../common-components/pagination/pagination"
+import React from 'react';
+import { FaFilter } from "react-icons/fa";
+import { Button, FormGroup, Input } from 'reactstrap';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import Pagination from "../../../common-components/pagination/pagination";
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import "./ido-transactions.scss";
+import TransactionsTable from "./transactions-table";
 
 const IdoDashboard = () => {
     useTitle('IDO')

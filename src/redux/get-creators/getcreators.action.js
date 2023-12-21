@@ -12,7 +12,6 @@ export const fetchAllCreators = (frmdata) => async (dispatch) => {
 	dispatch(fetchCreatorLoading());
 	try {
 		const result = await fetchAdminCreators(frmdata);
-		console.log("hen", result)
 		dispatch(fetchCreatorSuccess(result.adminUser));
 		dispatch(fetchPageSuccess(result.totalPages));
 		dispatch(fetchPageNoSuccess(result.pageNo))
@@ -30,7 +29,6 @@ export const filterSerachCreator = (frmdata) => async (dispatch) => {
 	dispatch(fetchCreatorLoading());
 	try {
 		const result = await fetchFilteredAdminCreators(frmdata);
-		console.log("hen", result)
 		dispatch(fetchCreatorSuccess(result.adminUser));
 		dispatch(fetchPageSuccess(result.totalPages));
 		dispatch(fetchPageNoSuccess(result.pageNo))

@@ -1,24 +1,23 @@
+import Axios from "axios";
+import dateFormat from "dateformat";
 import React, { useEffect, useState } from "react";
+import { BsCheckCircle, BsThreeDots } from "react-icons/bs";
+import { FaFilter } from "react-icons/fa";
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import {
+  MdBlock,
+  MdContentCopy,
+  MdDeleteOutline,
+  MdMailOutline,
+} from "react-icons/md";
 import { Link } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
-import "./creators-detail.scss";
+import { Button, FormGroup, Input } from "reactstrap";
+import swal from "sweetalert";
+import CreaterThumb from "../../../../assets/images/creater-thumb.png";
 import Header from "../../../common-components/header/header";
 import IdoLeftBar from "../marketplace-leftbar/marketplace-leftbar";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import { FaFilter } from "react-icons/fa";
-import { BsThreeDots, BsCheckCircle } from "react-icons/bs";
-import {
-  MdContentCopy,
-  MdMailOutline,
-  MdBlock,
-  MdDeleteOutline,
-} from "react-icons/md";
-import CreaterThumb from "../../../../assets/images/creater-thumb.png";
 import CreatorTab from "./creatorTab";
-import Axios from "axios";
-import dateFormat, { masks } from "dateformat";
-import swal from "sweetalert";
-//import useTitle from '../../../../hooks/useTitle';
+import "./creators-detail.scss";
 
 const IdoBuyers = () => {
   // useTitle('Marketplace')
@@ -50,8 +49,6 @@ const IdoBuyers = () => {
           setCreator(response.data.creator);
           setWalletAddress(response.data.creator.walletAddress.slice(0, 9));
         }
-
-        console.log("responasa", response);
       })
       .catch((error) => {
         console.log("error2", error);
@@ -59,17 +56,12 @@ const IdoBuyers = () => {
     // setCollectionList(filteredCollectionList)
   };
 
-  console.log("creator", creator);
-  console.log("creatorWalletAddress", creatorWalletAddress);
-
   const handleChanges = (e) => {
     setSearch(e.target.value);
   };
-  console.log(search);
 
   const onSubmits = (e) => {
     e.preventDefault();
-    console.log("searchsssssssssssssssssssssssssssssssss", search);
     //api call for suspend user
     const accessJWT = localStorage.getItem("accessAdminJWT");
     swal({
@@ -93,7 +85,6 @@ const IdoBuyers = () => {
             if (response.data.status == "success") {
               setRefresh(!refresh);
             }
-            console.log("responasa", response);
           })
           .catch((error) => {
             console.log("error2", error);
@@ -142,7 +133,6 @@ const IdoBuyers = () => {
           swal("Email sent successfully!");
           setRefresh(!refresh);
         }
-        console.log("responasa", response);
       })
       .catch((error) => {
         console.log("error2", error);
@@ -233,7 +223,6 @@ const IdoBuyers = () => {
                     onClick={onSubmits}
 
                                     ><MdBlock /> Delete</button></li> */}
-
                   <li>
                     <Link to="/nfts-detail">
                       <MdDeleteOutline /> View Details

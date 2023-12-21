@@ -5,10 +5,12 @@
     background: #fff;
     width: 250px;
     bottom: 0;
-    .nav{
+
+    .nav {
         display: block;
-        li.nav-item{
-            a{
+
+        li.nav-item {
+            a {
                 padding: 15px 40px;
                 line-height: 40px;
                 display: block;
@@ -16,14 +18,17 @@
                 border-left: transparent solid 2px;
                 font-size: 16px;
                 line-height: 30px;
-                svg{
+
+                svg {
                     font-size: 20px;
                     line-height: 30px;
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: 10px;
                 }
-                &:hover, &.active{
+
+                &:hover,
+                &.active {
                     background: #efefef;
                     color: #000;
                     border-left: #000 solid 2px;
@@ -32,4 +37,3 @@
         }
     }
 }
-

@@ -1,11 +1,11 @@
 import React from "react";
-import { Nav, NavItem, NavLink } from "reactstrap";
-import { AiFillHome, AiTwotoneSetting, AiOutlineLogout } from "react-icons/ai";
+import { AiFillHome, AiOutlineLogout, AiTwotoneSetting } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { FiCodesandbox } from "react-icons/fi";
 import { TbArrowsLeftRight } from "react-icons/tb";
-import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import { Nav, NavItem, NavLink } from "reactstrap";
+import swal from "sweetalert";
 
 import "./ido-leftbar.scss";
 

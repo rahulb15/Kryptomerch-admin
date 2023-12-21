@@ -1,19 +1,14 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./collections.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from'../marketplace-leftbar/marketplace-leftbar'
-import {FaFilter} from "react-icons/fa"
-import CollectionTable from "./collections-table"
-import Pagination from "../../../common-components/pagination/pagination"
+import React from 'react';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar';
+import CollectionTable from "./collections-table";
 
 const IdoBuyers = () => {
     useTitle('Marketplace')
 
-
     return (
-        <div className = 'bashBg' >
+        <div className='bashBg' >
             <Header />
             <IdoLeftBar />
             {/* <div className='buyerFilter'>
@@ -26,7 +21,7 @@ const IdoBuyers = () => {
                 </div>
             </div> */}
             {/* <div className='idoTable'> */}
-                <CollectionTable />
+            <CollectionTable />
             {/* </div> */}
             {/* <div className='paginationBx'>
                 <Pagination />

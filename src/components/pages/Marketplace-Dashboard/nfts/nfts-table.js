@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Table, Button } from "reactstrap";
-import { BsThreeDots } from "react-icons/bs";
-import { MdContentCopy, MdBlock, MdDeleteOutline } from "react-icons/md";
-import { AiOutlineEye } from "react-icons/ai";
-import ProjImg1 from "../../../../assets/images/creater-thumb.png";
 import Axios from "axios";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
-import "./nfts.scss";
-import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import React, { useEffect, useState } from "react";
+import { AiOutlineEye } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
 import { FaFilter } from "react-icons/fa";
+import { MdDeleteOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { Button, FormGroup, Input, Pagination, PaginationItem, PaginationLink, Table } from "reactstrap";
+import "./nfts.scss";
 
 const IdoTable = () => {
   const [page, setPage] = useState(1);
@@ -21,7 +18,6 @@ const IdoTable = () => {
   const handleChanges = (e) => {
     setSearch(e.target.value);
   };
-  console.log(search);
 
   useEffect(() => {
     getCollection();
@@ -39,7 +35,6 @@ const IdoTable = () => {
     })
       .then((response) => {
         if (response.data.status == "success") {
-          console.log("colec", response);
           setNft(response.data.data[0].paginatedResults);
           const total = response.data.data[0].totalCount / limit;
           setTotalPage(Math.ceil(total));
@@ -47,15 +42,11 @@ const IdoTable = () => {
           // setCreator(response.data.creator)
           // setWalletAddress(response.data.creator.walletAddress.slice(0,9))
         }
-
-        console.log("responasa", response);
       })
       .catch((error) => {
         console.log("error2", error);
       });
   };
-
-  console.log("page", page);
 
   function decreasePage() {
     if (page > 1) {
@@ -68,8 +59,6 @@ const IdoTable = () => {
       setPage(page + 1);
     }
   }
-
-  console.log("total", totalPage);
 
   return (
     <React.Fragment>

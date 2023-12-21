@@ -1,9 +1,8 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./ido-setting.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-//import { FaFilter } from "react-icons/fa"
+import React from 'react';
+import { Button, FormGroup, Input, Label } from 'reactstrap';
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import "./ido-setting.scss";
 
 const IdoSetting = () => {
 

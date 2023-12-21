@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
-import "./creators.scss";
+import React, { useEffect, useState } from "react";
+import { FaFilter } from "react-icons/fa";
+import { Button, FormGroup, Input } from "reactstrap";
 import Header from "../../../common-components/header/header";
 import IdoLeftBar from "../marketplace-leftbar/marketplace-leftbar";
-import { FaFilter } from "react-icons/fa";
 import CreatorTable from "./creator-table";
 // import Pagination from "../../../common-components/pagination/pagination"
-//import { useSelector, useDispatch } from "react-redux";
-//import { filterSerachCreator } from "../../../../redux/get-creators/getcreators.action";
-//import { fetchAllCreators } from "../../../../redux/get-creators/getcreators.action";
+import Axios from "axios";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import useTitle from "../../../../hooks/useTitle";
-import Axios from "axios";
 
 const IdoBuyers = () => {
   useTitle("Marketplace");
+
   const [creator, setCreator] = useState([]);
-  const [userName, setUserName] = useState("");
   //   const [paginationNo, setPaginationNo] = useState(pageNo);
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(5);
@@ -38,22 +34,17 @@ const IdoBuyers = () => {
     )
       .then((response) => {
         if (response.data.status == "success") {
-          console.log("colec", response);
           setCreator(response.data.adminUser[0].paginatedResults);
           const total = response.data.adminUser[0].totalCount / limit;
           setTotalPage(Math.ceil(total));
           // setCreator(response.data.creator)
           // setWalletAddress(response.data.creator.walletAddress.slice(0,9))
         }
-
-        console.log("responasa", response);
       })
       .catch((error) => {
         console.log("error2", error);
       });
   };
-
-  console.log("creator", creator);
 
   function decreasePage() {
     if (page > 1) {
@@ -70,13 +61,11 @@ const IdoBuyers = () => {
   const handleChanges = (e) => {
     setSearch(e.target.value);
   };
-  console.log(search);
 
   useEffect(() => {
     getCreators();
   }, [page, search]);
 
-  console.log("page", page);
   return (
     <div className="bashBg">
       <Header />
@@ -127,7 +116,6 @@ const IdoBuyers = () => {
           </PaginationItem>
         </Pagination>
       </div>
-
       {/* <div className='paginationBx'>
             <Pagination aria-label="Page navigation example">
             {pageNo==1 ?<PaginationItem disabled>

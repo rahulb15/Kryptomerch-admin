@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { Button, FormGroup, Label, Input } from 'reactstrap';
-import Logo from '../../../assets/images/logo.png'
-import "./reset-password.scss"
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
 import { BsEye } from "react-icons/bs";
-import { useDispatch, useSelector } from 'react-redux';
-import { forgetPassword, resetPassword } from "../../../api/user.api"
-import axios from "axios"
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-//import { useLocation } from 'react-router';
-//import queryString from 'query-string';
+import { Button, FormGroup, Input } from 'reactstrap';
+import { resetPassword } from "../../../api/user.api";
+import Logo from '../../../assets/images/logo.png';
 
 const SignIn = () => {
     const [password, setPassword] = useState('');
@@ -36,6 +31,7 @@ const SignIn = () => {
         } else {
             x.type = "password";
         }
+
     }
 
     const revealPassword2 = () => {
@@ -47,27 +43,29 @@ const SignIn = () => {
             x.type = "password";
         }
     }
+
     const handleOnSubmit = async (e) => {
         e.preventDefault();
+
         if (!password || !confirmPassword) {
             return alert('Fill up all the form!');
         }
         // dispatch(loginPending());
         try {
             const location = (new URLSearchParams(window.location.search)).get("id")
-            console.log("token", location);
             const responseForgetPass = await resetPassword({ password, confirmPassword, token: `${location}` });
-            console.log("forgot", responseForgetPass)
             if (responseForgetPass.status === 'success') {
                 toast.success("Password has been changed", {
                     position: "top-right"
                 });
             }
+
             if (responseForgetPass.status === 'error') {
                 toast.error(responseForgetPass.message, {
                     position: "top-right"
                 });
             }
+
         } catch (error) {
             toast.error(error, {
                 position: "top-right"

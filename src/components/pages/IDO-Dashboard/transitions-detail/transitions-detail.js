@@ -1,16 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import "./transitions-detail.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-import { HiArrowNarrowLeft } from "react-icons/hi"
-import { BsThreeDots, BsCheckCircle } from "react-icons/bs";
-import { MdContentCopy, MdMailOutline, MdBlock, MdDeleteOutline } from "react-icons/md"
-
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import "./transitions-detail.scss";
 
 const IdoDashboard = () => {
-
     return (
         <div className='bashBg'>
             <Header />
@@ -121,7 +117,6 @@ const IdoDashboard = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

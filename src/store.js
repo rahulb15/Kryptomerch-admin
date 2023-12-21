@@ -15,8 +15,8 @@ const persistConfig = {
 
 const reducer = combineReducers({
     loginStatus: loginSlice,
-    adminUser: adminUser,
-    creatorListSlice: creatorListSlice
+    adminUser:adminUser,
+    creatorListSlice:creatorListSlice
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

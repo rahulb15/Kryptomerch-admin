@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react'
-//import { Link } from 'react-router-dom';
-//import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./nfts.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar'
-//import { HiArrowNarrowLeft } from "react-icons/hi"
-//import { FaFilter } from "react-icons/fa"
-//import { BsThreeDots, BsCheckCircle } from "react-icons/bs";
-//import { MdContentCopy, MdMailOutline, MdBlock, MdDeleteOutline } from "react-icons/md"
-//import CreaterThumb from '../../../../assets/images/creater-thumb.png'
-//import Pagination from "../../../common-components/pagination/pagination"
-import ColDetTable from './nfts-table'
+import React from 'react';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar';
+import ColDetTable from './nfts-table';
+import "./nfts.scss";
 
 const IdoBuyers = () => {
     useTitle('Marketplace')
@@ -22,7 +14,6 @@ const IdoBuyers = () => {
     // }
 
     // console.log(search)
-
 
     return (
         <div className='bashBg' >

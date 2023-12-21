@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button, FormGroup, Input } from 'reactstrap';
-import Logo from '../../../assets/images/logo.png'
-import "./verification.scss"
-import { Link } from 'react-router-dom'
+import Logo from '../../../assets/images/logo.png';
+import "./verification.scss";
 
 const SignIn = () => {
     return (

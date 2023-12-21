@@ -1,32 +1,31 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "bootstrap/dist/css/bootstrap.min.css"
-import './index.scss';
-import App from './App';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux'
-import store from './store'
-import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
+import { PersistGate } from "redux-persist/integration/react";
+import App from './App';
 import TitleContextProvider from './contexts/headerContext';
-
+import './index.scss';
+import reportWebVitals from './reportWebVitals';
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let persistor = persistStore(store);
 root.render(
 
   <React.StrictMode>
-    <TitleContextProvider>
-      <BrowserRouter>
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            <App />
-          </PersistGate>
-        </Provider>
-      </BrowserRouter>
+          <TitleContextProvider>
+    <BrowserRouter>
+    <Provider store={store}>
+    <PersistGate persistor={persistor}>
+      <App />
+      </PersistGate>
+      </Provider>
+    </BrowserRouter>
     </TitleContextProvider>
-
+    
   </React.StrictMode>
 );
 

@@ -1,9 +1,7 @@
-import React from 'react'
-//import { Button, FormGroup, Input } from 'reactstrap';
-import Logo from '../../../assets/images/logo.png'
-import SucessIcon from '../../../assets/images/sucess-icon.svg'
-import "./reset-successfully.scss"
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../../assets/images/logo.png';
+import SucessIcon from '../../../assets/images/sucess-icon.svg';
 
 const ResetSuccessfully = () => {
     return (

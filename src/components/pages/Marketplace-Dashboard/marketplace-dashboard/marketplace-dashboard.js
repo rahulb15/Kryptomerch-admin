@@ -1,22 +1,23 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText, Table } from 'reactstrap';
-import "./marketplace-dashboard.scss"
-import Header from '../../../common-components/header/header'
-import MarketplaceLeftBar from '../marketplace-leftbar/marketplace-leftbar'
-import { FaKickstarterK, FaPencilAlt, FaUsers, FaTshirt } from "react-icons/fa"
-import { GiCrownCoin } from "react-icons/gi"
+import React from 'react';
+import { AiOutlineEye } from "react-icons/ai";
+import { BsArrowDownRightCircleFill, BsArrowUpRightCircleFill, BsThreeDots } from "react-icons/bs";
+import { FaKickstarterK, FaPencilAlt, FaTshirt, FaUsers } from "react-icons/fa";
+import { GiCrownCoin } from "react-icons/gi";
+import { MdBlock, MdDeleteOutline } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import { MdContentCopy, MdBlock, MdDeleteOutline } from "react-icons/md"
-import { AiOutlineEye } from "react-icons/ai"
-import { BsArrowDownRightCircleFill, BsArrowUpRightCircleFill, BsThreeDots } from "react-icons/bs"
-import Salegraph from '../../../../assets/images/sale-graph2.png'
-import VisitGraph from '../../../../assets/images/visiter-graph.png'
-import BuyerImg1 from '../../../../assets/images/buyerImg.png'
-import MerchImg from '../../../../assets/images/merchandImg.png'
+import { Button, FormGroup, Input } from 'reactstrap';
+import BuyerImg1 from '../../../../assets/images/buyerImg.png';
+import MerchImg from '../../../../assets/images/merchandImg.png';
+import Salegraph from '../../../../assets/images/sale-graph2.png';
+import VisitGraph from '../../../../assets/images/visiter-graph.png';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import MarketplaceLeftBar from '../marketplace-leftbar/marketplace-leftbar';
+import "./marketplace-dashboard.scss";
 
 const IdoDashboard = () => {
     useTitle('Marketplace')
+
     return (
         <div className='bashBg' >
             <Header />

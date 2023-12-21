@@ -1,24 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Table, Button } from "reactstrap";
-import { BsThreeDots } from "react-icons/bs";
-import { MdContentCopy, MdBlock, MdDeleteOutline } from "react-icons/md";
-import { AiOutlineEye } from "react-icons/ai";
-import ProjImg1 from "../../../../assets/images/proj-img1.png";
 import axios from "axios";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import React, { useState } from "react";
+import { AiOutlineEye } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
+import { MdDeleteOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { Button, Pagination, PaginationItem, PaginationLink, Table } from "reactstrap";
+import ProjImg1 from "../../../../assets/images/proj-img1.png";
 
 const IdoTable = (props) => {
-  console.log("propsTABLE", props);
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(5);
   const [totalPage, setTotalPage] = useState(0);
-  console.log("props", props.search);
   const [nftList, setNftList] = React.useState([]);
   const [collections, setCollections] = React.useState([]);
 
   React.useEffect(() => {
-    // console.log("propszzzzzzzzzzzzzzzzzzz",props.creator._id)
     const accessJWT = localStorage.getItem("accessAdminJWT");
     if (props.tabId == "2" || props.tabId == "3") {
       axios
@@ -39,7 +35,6 @@ const IdoTable = (props) => {
           // props.setCreator(response.data.creator)
           // props.setWalletAddress(response.data.creator.walletAddress.slice(0,9))
           // }
-          console.log("responasa", response.data.data[0].paginatedResults);
           setNftList(response.data.data[0].paginatedResults);
           const total = response.data.data[0].totalCount / limit;
           setTotalPage(Math.ceil(total));
@@ -64,10 +59,8 @@ const IdoTable = (props) => {
           }
         )
         .then((response) => {
-          console.log("responasaCollection", response.data.user[0].paginatedResults);
           setCollections(response.data.user[0].paginatedResults);
           const total = response.data.user[0].totalCount[0].count / limit;
-          console.log("totalaaaaaaaaaaaaaaaaaaa", total)
           setTotalPage(Math.ceil(total));
           // console.log("responasa",response)
         })
@@ -76,18 +69,7 @@ const IdoTable = (props) => {
         }
         );
     }
-
-
   }, [props.tabId, page, props.search]);
-
-  console.log("total", totalPage);
-
-
-
-
-  console.log("nftList", nftList);
-
-  console.log("page", page);
 
   function decreasePage() {
     if (page > 1) {
@@ -100,8 +82,6 @@ const IdoTable = (props) => {
       setPage(page + 1);
     }
   }
-
-  console.log("total", totalPage);
 
   return (
     <>
@@ -230,7 +210,6 @@ const IdoTable = (props) => {
             })}
           {props.tabId === "3" &&
             nftList?.map((item, index) => {
-              console.log("item", item);
               return (
                 <tr key={index}>
                   <td>
@@ -288,7 +267,6 @@ const IdoTable = (props) => {
             })}
           {props.tabId === "4" &&
             collections?.map((item, index) => {
-              console.log("Collectionitem", item);
               return (
                 <tr key={index}>
                   <td>

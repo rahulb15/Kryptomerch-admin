@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import { Link } from 'react-router-dom';
-//import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./nfts-detail.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar'
-import { HiArrowNarrowLeft } from "react-icons/hi"
-import Overdetail from './overviewDetail'
-import OverviewTabs from './overviewtabs/overviewTabs'
-import HistoryAccordian from './historyaccordian'
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar';
+import HistoryAccordian from './historyaccordian';
+import "./nfts-detail.scss";
+import Overdetail from './overviewDetail';
+import OverviewTabs from './overviewtabs/overviewTabs';
 
 const IdoBuyers = () => {
     return (

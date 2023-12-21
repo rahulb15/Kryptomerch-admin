@@ -1,13 +1,12 @@
-import * as React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 import { BsGraphUp, BsListStars } from "react-icons/bs";
 import { FaTags } from "react-icons/fa";
-import HistGraph from '../../../../assets/images/history-graph.png'
+import HistGraph from '../../../../assets/images/history-graph.png';
 
 export default function SimpleAccordion() {
   return (
@@ -90,7 +89,6 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-
     </div>
   );
 }

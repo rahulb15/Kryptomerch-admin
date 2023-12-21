@@ -1,16 +1,14 @@
+import axios from "axios";
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
-import "./marketplace-setting.scss";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { Button, FormGroup, Input, Label } from "reactstrap";
+import useTitle from "../../../../hooks/useTitle";
 import Header from "../../../common-components/header/header";
 import IdoLeftBar from "../marketplace-leftbar/marketplace-leftbar";
-//import { FaFilter } from "react-icons/fa";
-import { toast } from "react-toastify";
-import axios from "axios";
-import useTitle from "../../../../hooks/useTitle";
-import { useSelector, useDispatch } from "react-redux";
+import "./marketplace-setting.scss";
 
 const ChangePassword = (props) => {
-  console.log("dddddddddddddddddddd", props);
   useTitle("Marketplace");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
@@ -18,8 +16,8 @@ const ChangePassword = (props) => {
   const [passwordError, setPasswordError] = React.useState("");
   const [confirmPasswordError, setConfirmPasswordError] = React.useState("");
   const [oldPasswordError, setOldPasswordError] = React.useState("");
+
   const { user } = useSelector((state) => state.adminUser);
-  console.log("user", user);
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -73,12 +71,10 @@ const ChangePassword = (props) => {
             confirmPassword: confirmPassword,
           })
           .then(function (response) {
-            console.log(response);
             if (response.data.status === "success") {
               toast.success(response.data.message, {
                 position: "top-right",
               });
-
               setPassword("");
               setConfirmPassword("");
               setOldPassword("");
@@ -100,7 +96,6 @@ const ChangePassword = (props) => {
             toast.error("Something went wrong", {
               position: "top-right",
             });
-
             console.log(error);
           });
       } catch (error) {
@@ -112,14 +107,6 @@ const ChangePassword = (props) => {
       });
     }
   };
-
-  console.log("...........", password, confirmPassword, oldPassword);
-  console.log(
-    "...........",
-    passwordError,
-    confirmPasswordError,
-    oldPasswordError
-  );
 
   return (
     <div className="bashBg">

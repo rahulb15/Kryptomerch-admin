@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 export const userLogin = (frmData) => {
 	return new Promise(async (resolve, reject) => {
@@ -15,7 +15,6 @@ export const userLogin = (frmData) => {
 };
 
 export const forgetPassword = (frmData, id) => {
-	console.log('from api', frmData);
 	return new Promise(async (resolve, reject) => {
 		try {
 			const result = await axios.post(
@@ -30,9 +29,7 @@ export const forgetPassword = (frmData, id) => {
 	});
 };
 
-
 export const resetPassword = (frmData, id) => {
-	console.log('from api', frmData);
 	return new Promise(async (resolve, reject) => {
 		try {
 			const result = await axios.post(
@@ -51,6 +48,7 @@ export const fetchAdminUser = () => {
 	return new Promise(async (resolve, reject) => {
 		try {
 			const accessJWT = localStorage.getItem('accessAdminJWT');
+
 			if (!accessJWT) {
 				reject('Token not found!');
 			}
@@ -86,7 +84,6 @@ export const fetchAdminCreators = (frmdata) => {
 		}
 	});
 };
-
 
 export const fetchFilteredAdminCreators = (frmdata) => {
 	return new Promise(async (resolve, reject) => {

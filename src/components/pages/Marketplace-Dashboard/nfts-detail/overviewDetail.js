@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import { FaEarlybirds, FaRegHeart, FaTshirt } from "react-icons/fa"
+import { HiCheckCircle, HiEye, HiOutlineRefresh, HiShare } from "react-icons/hi"
 import overviewDetImg from '../../../../assets/images/detail-thumb.png'
-import { FaTshirt, FaEarlybirds, FaRegHeart } from "react-icons/fa"
-import { HiCheckCircle, HiEye, HiShare, HiOutlineRefresh, HiOutlineShoppingCart } from "react-icons/hi"
 
 export default class OverviewDetail extends Component {
     render() {

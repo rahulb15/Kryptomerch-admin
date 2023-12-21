@@ -37,7 +37,6 @@ const creatorListSlice = createSlice({
 			state.creators = state.creators.filter((row) => {
 				if (!payload) return row;
 
-
 				if (row.name) {
 					return row.name.toLowerCase().includes(payload.toLowerCase());
 				} else {

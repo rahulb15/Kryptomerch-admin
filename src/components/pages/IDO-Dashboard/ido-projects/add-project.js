@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, FormText } from 'reactstrap';
+import { Button, FormGroup, Input, Label, Modal, ModalBody, ModalHeader } from 'reactstrap';
 
 class AddModal extends React.Component {
     constructor(props) {
@@ -7,7 +7,6 @@ class AddModal extends React.Component {
         this.state = {
             modal: false
         };
-
         this.toggle = this.toggle.bind(this);
     }
 

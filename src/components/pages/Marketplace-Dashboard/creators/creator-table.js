@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Table, Button } from 'reactstrap';
+import Axios from 'axios';
+import dateFormat from "dateformat";
+import React from 'react';
+import { AiOutlineEye } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
-import { MdContentCopy, MdBlock, MdDeleteOutline } from "react-icons/md"
-import { AiOutlineEye } from "react-icons/ai"
-import Axios from 'axios'
-import dateFormat, { masks } from "dateformat";
-//import {useSelector,useDispatch} from "react-redux"
-//import { fetchAllCreators } from '../../../../redux/get-creators/getcreators.action';
+import { MdContentCopy, MdDeleteOutline } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { Button, Table } from 'reactstrap';
 
 const IdoTable = (props) => {
-
     const deleteCreators = (_id) => {
         const accessJWT = localStorage.getItem('accessAdminJWT');
         Axios.post("/creator/deleteCreator", { _id: _id }, {
@@ -25,13 +22,10 @@ const IdoTable = (props) => {
                     // setCreator(response.data.creator)
                     // setWalletAddress(response.data.creator.walletAddress.slice(0,9))
                 }
-                console.log("responasa", response)
-
             }).catch((error) => {
                 console.log("error2", error)
             }
             )
-
     }
 
     return (
@@ -52,12 +46,10 @@ const IdoTable = (props) => {
             </thead>
             <tbody>
                 {props?.creators.map((data) => {
-                    console.log("dataaaaaaaaaaaaaaaaaaaaaaa", data)
                     return (
                         <tr key={data._id}>
                             <td>
                                 <span>{data.name}</span>
-
                                 <small>{data.walletAddress.slice(0, 8)}... <MdContentCopy /> </small>
                             </td>
                             <td>
@@ -91,7 +83,6 @@ const IdoTable = (props) => {
                                     <BsThreeDots />
                                     <div className='actionList'>
                                         <ul>
-
                                             <li><Link to={{
                                                 pathname: "/creator-detail",
                                                 search: `?id=${data._id}`,
@@ -105,13 +96,9 @@ const IdoTable = (props) => {
                         </tr>
                     )
                 })}
-
-
-
             </tbody>
         </Table>
     );
-
 }
 
 export default IdoTable

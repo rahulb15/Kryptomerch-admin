@@ -36,6 +36,7 @@ const creatorListSlice = createSlice({
 		searchCreators: (state, { payload }) => {
 			state.allCollections = state.allCollections.filter((row) => {
 				if (!payload) return row;
+
 				if (row.name) {
 					return row.name.toLowerCase().includes(payload.toLowerCase());
 				} else {

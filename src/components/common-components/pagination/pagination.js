@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from "react-redux"
-import { fetchAllCreators } from '../../../redux/get-creators/getcreators.action';
+import React, { useState } from 'react';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 const Example = () => {
   const [page, setPage] = useState(1)
-  const [totalPage, setTotalPage] = useState(0)
-  const [changePage, setChangePage] = useState(false)
-  const dispatch = useDispatch();
-  //console.log("page", page)
+
   return (
     <Pagination aria-label="Page navigation example">
       <PaginationItem onClick={() => setPage(page - 1)}>
@@ -16,6 +11,7 @@ const Example = () => {
           Pre
         </PaginationLink>
       </PaginationItem>
+
 
       <PaginationItem onClick={() => setPage(page - 1)}>
         <PaginationLink href="#">
@@ -36,6 +32,7 @@ const Example = () => {
       </PaginationItem>
     </Pagination>
   );
+
 }
 
 export default Example

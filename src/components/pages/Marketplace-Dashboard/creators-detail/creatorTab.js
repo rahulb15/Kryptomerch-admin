@@ -1,20 +1,15 @@
-import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import CreatorTable from "./creators-detail-table"
-import Pagination from "../../../common-components/pagination/pagination"
 import classnames from 'classnames';
-//import axios from 'axios';
+import React from 'react';
+import { Col, Nav, NavItem, NavLink, Row, TabContent, TabPane } from 'reactstrap';
+import CreatorTable from "./creators-detail-table";
 
 const CreatorTab = (props) => {
   // console.log("propszzzzzzzzzzzzzzzzzzz",props)
   const [activeTab, setActiveTab] = React.useState('1');
   // const [nftList,setNftList]=React.useState([])
-
   const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
   }
-
-  console.log("activeTab",activeTab)
 
 //   React.useEffect(()=>{
 //     console.log("propszzzzzzzzzzzzzzzzzzz",props.creator._id)

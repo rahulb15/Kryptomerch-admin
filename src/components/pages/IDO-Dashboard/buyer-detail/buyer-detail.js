@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { BsCheckCircle, BsThreeDots } from "react-icons/bs";
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import { MdBlock, MdContentCopy, MdDeleteOutline, MdMailOutline } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import "./buyer-detail.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-import { HiArrowNarrowLeft } from "react-icons/hi"
-import { BsThreeDots, BsCheckCircle } from "react-icons/bs";
-import { MdContentCopy, MdMailOutline, MdBlock, MdDeleteOutline } from "react-icons/md"
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import "./buyer-detail.scss";
 
 const BuyerDetail = () => {
     return (
@@ -100,7 +100,6 @@ const BuyerDetail = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

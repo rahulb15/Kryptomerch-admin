@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./ido-dashboard.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-import { FaKickstarterK, FaPencilAlt, FaUsers } from "react-icons/fa"
-import { BsArrowDownRightCircleFill, BsArrowUpRightCircleFill } from "react-icons/bs"
-import { AiFillDollarCircle } from "react-icons/ai"
-import Salegraph from '../../../../assets/images/sale-graph.png'
-import BuyerImg1 from '../../../../assets/images/buyer-image1.png'
+import React from 'react';
+import { AiFillDollarCircle } from "react-icons/ai";
+import { BsArrowDownRightCircleFill, BsArrowUpRightCircleFill } from "react-icons/bs";
+import { FaKickstarterK, FaPencilAlt, FaUsers } from "react-icons/fa";
+import { Button, FormGroup, Input } from 'reactstrap';
+import BuyerImg1 from '../../../../assets/images/buyer-image1.png';
+import Salegraph from '../../../../assets/images/sale-graph.png';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import "./ido-dashboard.scss";
 
 const IdoDashboard = () => {
     useTitle('IDO')

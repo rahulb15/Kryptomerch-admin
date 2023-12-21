@@ -1,12 +1,12 @@
 import React from 'react'
-import "./footer.scss"
+// import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer =()=>{
     return (
-        <div>
-            Footer Coming Soon
-        </div>
-    )
-}
+            <div>
+                Footer Coming Soon
+            </div>
+        )
+    }
 
 export default Footer

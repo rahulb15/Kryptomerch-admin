@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { AiFillHome, AiOutlineLogout, AiTwotoneSetting } from "react-icons/ai";
+import { FaSuitcase, FaTshirt, FaUserAlt } from "react-icons/fa";
+import { GiCrownCoin } from "react-icons/gi";
+import { Link, useNavigate } from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import { AiFillHome, AiTwotoneSetting, AiOutlineLogout } from "react-icons/ai"
-import { FaUserAlt, FaSuitcase, FaTshirt } from "react-icons/fa"
-import { GiCrownCoin } from "react-icons/gi"
 import swal from 'sweetalert';
-import { useNavigate } from 'react-router-dom'
-import "./marketplace-leftbar.scss"
+
+import "./marketplace-leftbar.scss";
 
 const IdoLeftbar = (props) => {
     const [path, setPath] = React.useState("")
@@ -45,9 +45,6 @@ const IdoLeftbar = (props) => {
         }
     }, [active])
 
-    console.log("path", path)
-    console.log("active", active)
-
     const logout = () => {
         swal({
             title: "Are you sure?",
@@ -67,9 +64,6 @@ const IdoLeftbar = (props) => {
             }
         });
     }
-
-
-
 
     return (
         <div className='leftbar'>

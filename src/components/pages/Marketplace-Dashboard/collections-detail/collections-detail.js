@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./collections-detail.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar'
-import { HiArrowNarrowLeft } from "react-icons/hi"
-import { FaFilter } from "react-icons/fa"
-import { BsThreeDots, BsCheckCircle } from "react-icons/bs";
-import { MdContentCopy, MdMailOutline, MdBlock, MdDeleteOutline } from "react-icons/md"
-import CreaterThumb from '../../../../assets/images/creater-thumb.png'
-import Pagination from "../../../common-components/pagination/pagination"
-import ColDetTable from './collections-detail-table'
-import Axios from "axios"
-import swal from "sweetalert";
+import Axios from "axios";
 import Pact from "pact-lang-api";
+import React, { useEffect, useState } from 'react';
+import { BsThreeDots } from "react-icons/bs";
+import { FaFilter } from "react-icons/fa";
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import { MdDeleteOutline, MdMailOutline } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { Button, FormGroup, Input } from 'reactstrap';
+import swal from "sweetalert";
+import CreaterThumb from '../../../../assets/images/creater-thumb.png';
+import Header from '../../../common-components/header/header';
+import Pagination from "../../../common-components/pagination/pagination";
+import IdoLeftBar from '../marketplace-leftbar/marketplace-leftbar';
+import ColDetTable from './collections-detail-table';
+import "./collections-detail.scss";
 
-const NETWORK_ID = "testnet04";
-const CHAIN_ID = "1";
+const NETWORK_ID = "mainnet01";
+const CHAIN_ID = "8";
+
 const API_HOST = `https://api.chainweb.com/chainweb/0.0/${NETWORK_ID}/chain/${CHAIN_ID}/pact`;
 
 const IdoBuyers = () => {
@@ -24,9 +25,11 @@ const IdoBuyers = () => {
     const [nftNumber, setNftNUmber] = useState("")
     const [refresh, setRefresh] = useState(false)
     const [account, setAccount] = useState("")
+
     useEffect(() => {
         getCollector()
     }, [refresh])
+
     const getCollector = () => {
         const search = window.location.search
         const params = new URLSearchParams(search)
@@ -39,25 +42,26 @@ const IdoBuyers = () => {
         })
             .then((response) => {
                 if (response.data.status == "success") {
-                    console.log("rel", response.data.data)
                     setCollection(response.data.data[0])
                     setAccount(response.data.data[0].user_info[0].walletAddress)
                     setNftNUmber(response.data.data[0].nft_info.length)
-                }
-                console.log("responasa", response)
 
+                }
             }).catch((error) => {
                 console.log("error2", error)
-            })
+            }
+
+            )
         // setCollectionList(filteredCollectionList)
-    }//    console.log("collection", collection)
+
+    }
 
     const getAllCollectionRequest = async (account) => {
         const accountName = account;
         const publicKey = accountName.slice(2, accountName.length);
         const guard = { keys: [publicKey], pred: "keys-all", }
         const a = accountName
-        const pactCode = `(free.merchfinal001.get-all-collections-request)`
+        const pactCode = `(free.kryptomerch-contract.get-all-collections-request)`
         const signCmd = {
             pactCode: pactCode,
             caps: [
@@ -73,9 +77,8 @@ const IdoBuyers = () => {
                 "guard": guard
             },
         }; //alert to sign tx
-        console.log(signCmd, "signcmd");
         const cmd = await Pact.wallet.sign(signCmd);
-        console.log("cmjj", cmd);
+
         const localRes = await fetch(`${API_HOST}/api/v1/local`, {
             headers: {
                 "Content-Type": "application/json",
@@ -83,30 +86,20 @@ const IdoBuyers = () => {
             method: "POST",
             body: JSON.stringify(cmd),
         });
-        console.log(localRes, "localrp");
         const rawRes = await localRes;
         const resJSON = await rawRes.json();
-        console.log("rawraw", resJSON)
         if (resJSON.result.status === "success") {
-
             const reqKey = await Pact.wallet.sendSigned(cmd, API_HOST)
-
-            console.log(reqKey, "Reqkey");
             const signedtxx = await Pact.fetch.listen({ listen: reqKey.requestKeys[0] }, API_HOST);
-            console.log(signedtxx, "xxxxxxxxxxxxxx")
         }
-
     }
 
     const getCollectionInfo = async (account) => {
-
         const accountName = account;
         const publicKey = accountName.slice(2, accountName.length);
         const guard = { keys: [publicKey], pred: "keys-all", }
-
         const a = accountName
-
-        const pactCode = `(free.merchfinal001.get-collection-info "CollectionTen")`
+        const pactCode = `(free.kryptomerch-contract.get-collection-info "CollectionTen")`
         const signCmd = {
             pactCode: pactCode,
             caps: [
@@ -122,10 +115,7 @@ const IdoBuyers = () => {
                 "guard": guard
             },
         }; //alert to sign tx
-        console.log(signCmd, "signcmd");
         const cmd = await Pact.wallet.sign(signCmd);
-        console.log("cmjj", cmd);
-
         const localRes = await fetch(`${API_HOST}/api/v1/local`, {
             headers: {
                 "Content-Type": "application/json",
@@ -133,39 +123,27 @@ const IdoBuyers = () => {
             method: "POST",
             body: JSON.stringify(cmd),
         });
-        console.log(localRes, "localrp");
         const rawRes = await localRes;
         const resJSON = await rawRes.json();
-        console.log("rawraw", resJSON)
         if (resJSON.result.status === "success") {
-
             const reqKey = await Pact.wallet.sendSigned(cmd, API_HOST)
-
-            console.log(reqKey, "Reqkey");
             const signedtxx = await Pact.fetch.listen({ listen: reqKey.requestKeys[0] }, API_HOST);
-            console.log(signedtxx, "xxxxxxxxxxxxxx")
         }
-
     }
 
-
     const launchCollection = async (account) => {
-
-        const accountName = "k:56609bf9d1983f0c13aaf3bd3537fe00db65eb15160463bb641530143d4e9bcf";
+        const accountName = "k:700084d1bf377ffadf4571f38ad19caf0988d3a4be0b7669f5845df7c5246508";
         const publicKey = accountName.slice(2, accountName.length);
         const guard = { keys: [publicKey], pred: "keys-all", }
-
         const a = accountName
-
         // const pactCode=`(free.merchfinal001.launch-nft-collection "collectionOne")`
-        const pactCode = `(free.merchfinal001.launch-nft-collection "collectionOne")`
+        const pactCode = `(free.kryptomerch-contract.launch-nft-collection "collectionOne")`
         const signCmd = {
             pactCode: pactCode,
             caps: [
                 Pact.lang.mkCap("GAS", "Capability to allow buying gas", "coin.GAS", []),
-                Pact.lang.mkCap("PASS", "Capability for owner", "free.merchfinal001.IS_ADMIN")
-            ]
-            ,
+                // Pact.lang.mkCap("PASS", "Capability for owner", "free.kryptomerch-contract.IS_ADMIN")
+            ],
             sender: a,
             gasLimit: 150000,
             chainId: CHAIN_ID,
@@ -175,10 +153,7 @@ const IdoBuyers = () => {
                 "guard": guard
             },
         }; //alert to sign tx
-        console.log(signCmd, "signcmd");
         const cmd = await Pact.wallet.sign(signCmd);
-        console.log("cmjj", cmd);
-
         const localRes = await fetch(`${API_HOST}/api/v1/local`, {
             headers: {
                 "Content-Type": "application/json",
@@ -186,23 +161,15 @@ const IdoBuyers = () => {
             method: "POST",
             body: JSON.stringify(cmd),
         });
-        console.log(localRes, "localrp");
         const rawRes = await localRes;
         const resJSON = await rawRes.json();
-        console.log("rawraw", resJSON)
         if (resJSON.result.status === "success") {
-
             const reqKey = await Pact.wallet.sendSigned(cmd, API_HOST)
-
-            console.log(reqKey, "Reqkey");
             const signedtxx = await Pact.fetch.listen({ listen: reqKey.requestKeys[0] }, API_HOST);
-            console.log(signedtxx, "xxxxxxxxxxxxxx")
         }
-
     }
 
     const handleSuspend = (id) => {
-        console.log("id", id)
         // e.preventDefault();
         //api call for suspend user
         const accessJWT = localStorage.getItem("accessAdminJWT");
@@ -214,13 +181,9 @@ const IdoBuyers = () => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-
                 getAllCollectionRequest(account);
                 // getCollectionInfo(account);
                 launchCollection(account);
-
-
-
                 //     Axios.post("/adminCollection/suspendCollection",{_id:id, status: true}, {
                 //         headers: {
                 //             Authorization: accessJWT,

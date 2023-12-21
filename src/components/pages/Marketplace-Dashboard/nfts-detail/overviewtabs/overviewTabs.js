@@ -1,15 +1,14 @@
-import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Form, FormGroup, Label, Input, FormText, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import OverviewTab1 from './overviewtab1'
-import OverviewTab2 from './overviewtab2'
-import OverviewTab3 from './overviewtab3'
-import OverviewTab4 from './overviewtab4'
+import React from 'react';
+import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
+import OverviewTab1 from './overviewtab1';
+import OverviewTab2 from './overviewtab2';
+import OverviewTab3 from './overviewtab3';
+import OverviewTab4 from './overviewtab4';
 
 export default class HotCollectionsTab extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1'

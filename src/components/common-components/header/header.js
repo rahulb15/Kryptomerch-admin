@@ -1,19 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../../assets/images/mark-icon1.png'
-//import useTitle from '../../../hooks/useTitle'
 import { TitleContext } from '../../../contexts/headerContext'
 import "./header.scss"
-import { useSelector, useDispatch } from "react-redux"
 
 const Header = () => {
-    const [headerName, setHeaderName] = useState("");    // useTitle('Dashboard')
+    // useTitle('Dashboard')
     const { title } = useContext(TitleContext);
-    const dispatch = useDispatch()
-    const { user } = useSelector(
-        (state) => state.adminUser
-    );
-    //console.log("..............", title);
 
     return (
         <div>

@@ -1,13 +1,12 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import "./ido-projects.scss"
-import Header from '../../../common-components/header/header'
-import IdoLeftBar from '../ido-leftbar/ido-leftbar'
-import { FaFilter } from "react-icons/fa"
-import IdoTable from "./ido-table"
-import Pagination from "../../../common-components/pagination/pagination"
-import AddProjectModal from "./add-project"
+import React from 'react';
+import { FaFilter } from "react-icons/fa";
+import { Button, FormGroup, Input } from 'reactstrap';
 import useTitle from '../../../../hooks/useTitle';
+import Header from '../../../common-components/header/header';
+import IdoLeftBar from '../ido-leftbar/ido-leftbar';
+import AddProjectModal from "./add-project";
+import "./ido-projects.scss";
+import IdoTable from "./ido-table";
 
 const IdoProjects = () => {
     useTitle('IDO')

@@ -1,9 +1,6 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
-import { Table, Button } from 'reactstrap';
-//import { MdContentCopy, MdBlock, MdDeleteOutline } from "react-icons/md"
-//import { AiOutlineEye } from "react-icons/ai"
-import ProjImg1 from "../../../../assets/images/proj-img1.png"
+import { Button, Table } from 'reactstrap';
+import ProjImg1 from "../../../../assets/images/proj-img1.png";
 
 export default class IdoTable extends React.Component {
     render() {

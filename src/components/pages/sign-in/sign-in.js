@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import { Button, FormGroup, Label, Input } from 'reactstrap';
-import Logo from '../../../assets/images/logo.png'
-import "./sign-in.scss"
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
 import { BsEye } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
-import { loginSuccess, loginPending, loginFail } from "../../../redux/login-redux/login.slice."
-import { getAdminUserProfile } from "../../../redux/get-admin-user/getAdminUser.action"
-import { userLogin } from "../../../api/user.api"
-import axios from "axios"
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
+import { Button, FormGroup, Input, Label } from 'reactstrap';
+import { userLogin } from "../../../api/user.api";
+import Logo from '../../../assets/images/logo.png';
+import { getAdminUserProfile } from "../../../redux/get-admin-user/getAdminUser.action";
+import { loginFail, loginPending, loginSuccess } from "../../../redux/login-redux/login.slice.";
+import "./sign-in.scss";
 
 const SignIn = () => {
     const navigate = useNavigate()
@@ -68,10 +66,12 @@ const SignIn = () => {
 
     const handleOnSubmit = async (e) => {
         e.preventDefault();
+
         if (!email || !password) {
             return alert('Fill up all the form!');
         }
         dispatch(loginPending());
+
         try {
             const isAuth = await userLogin({ email, password });
 
@@ -79,6 +79,7 @@ const SignIn = () => {
                 toast.error("Invalid Email or Password", {
                     position: "top-right"
                 });
+
                 return dispatch(loginFail(isAuth.message));
             }
             dispatch(loginSuccess());
@@ -132,6 +133,7 @@ const SignIn = () => {
                 <div className='signBtn'>
                     <Button onClick={handleOnSubmit}>Sign In</Button>
                 </div>
+
             </div>
         </div>
     )
