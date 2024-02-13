@@ -14,7 +14,7 @@ const IdoDashboard = () => {
             <div className='buyerFilter'>
                 <div className='buyersHd'>Transaction Details</div>
                 <div className='buyersFlt'>
-                    <Link to="admin/ido-buyers" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
+                    <Link to="/ido-buyers" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
                 </div>
             </div>
             <div className='buyerDetailBx'>

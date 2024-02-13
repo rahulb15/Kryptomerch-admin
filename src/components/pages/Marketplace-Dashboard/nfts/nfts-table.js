@@ -140,7 +140,7 @@ const IdoTable = () => {
                             <li>
                               <Link
                                 to={{
-                                  pathname: "admin/nfts-detail",
+                                  pathname: "/nfts-detail",
                                   search: `?id=${data._id}`,
                                 }}
                               >
@@ -148,7 +148,7 @@ const IdoTable = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link to="admin/nfts-detail">
+                              <Link to="/nfts-detail">
                                 <MdDeleteOutline /> Delete
                               </Link>
                             </li>

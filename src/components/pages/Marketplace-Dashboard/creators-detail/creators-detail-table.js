@@ -144,12 +144,12 @@ const IdoTable = (props) => {
                         <div className="actionList">
                           <ul>
                             <li>
-                              <Link to="admin/nfts-detail">
+                              <Link to="/nfts-detail">
                                 <AiOutlineEye /> View Details
                               </Link>
                             </li>
                             <li>
-                              <Link to="admin/nfts-detail">
+                              <Link to="/nfts-detail">
                                 <MdDeleteOutline /> Delete
                               </Link>
                             </li>
@@ -249,12 +249,12 @@ const IdoTable = (props) => {
                       <div className="actionList">
                         <ul>
                           <li>
-                            <Link to="admin/nfts-detail">
+                            <Link to="/nfts-detail">
                               <AiOutlineEye /> View Details
                             </Link>
                           </li>
                           <li>
-                            <Link to="admin/nfts-detail">
+                            <Link to="/nfts-detail">
                               <MdDeleteOutline /> Delete
                             </Link>
                           </li>
@@ -307,12 +307,12 @@ const IdoTable = (props) => {
                       <div className="actionList">
                         <ul>
                           <li>
-                            <Link to="admin/nfts-detail">
+                            <Link to="/nfts-detail">
                               <AiOutlineEye /> View Details
                             </Link>
                           </li>
                           <li>
-                            <Link to="admin/nfts-detail">
+                            <Link to="/nfts-detail">
                               <MdDeleteOutline /> Delete
                             </Link>
                           </li>

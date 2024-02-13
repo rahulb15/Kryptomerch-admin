@@ -403,10 +403,10 @@ const IdoDashboard = () => {
                                         <BsThreeDots />
                                         <div className='actionList'>
                                             <ul>
-                                                <li><Link to="admin/transitions-detail"><AiOutlineEye /> View Details</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdBlock /> Suspend</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
-                                            </ul>admin
+                                                <li><Link to="/transitions-detail"><AiOutlineEye /> View Details</Link></li>
+                                                <li><Link to="/nfts-detail"><MdBlock /> Suspend</Link></li>
+                                                <li><Link to="/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
+                                            </ul>
                                         </div>
                                     </Button>
                                 </td>
@@ -435,9 +435,9 @@ const IdoDashboard = () => {
                                         <BsThreeDots />
                                         <div className='actionList'>
                                             <ul>
-                                                <li><Link to="admin/transitions-detail"><AiOutlineEye /> View Details</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdBlock /> Suspend</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
+                                                <li><Link to="/transitions-detail"><AiOutlineEye /> View Details</Link></li>
+                                                <li><Link to="/nfts-detail"><MdBlock /> Suspend</Link></li>
+                                                <li><Link to="/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
                                             </ul>
                                         </div>
                                     </Button>
@@ -467,9 +467,9 @@ const IdoDashboard = () => {
                                         <BsThreeDots />
                                         <div className='actionList'>
                                             <ul>
-                                                <li><Link to="admin/transitions-detail"><AiOutlineEye /> View Details</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdBlock /> Suspend</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
+                                                <li><Link to="/transitions-detail"><AiOutlineEye /> View Details</Link></li>
+                                                <li><Link to="/nfts-detail"><MdBlock /> Suspend</Link></li>
+                                                <li><Link to="/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
                                             </ul>
                                         </div>
                                     </Button>
@@ -499,9 +499,9 @@ const IdoDashboard = () => {
                                         <BsThreeDots />
                                         <div className='actionList'>
                                             <ul>
-                                                <li><Link to="admin/transitions-detail"><AiOutlineEye /> View Details</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdBlock /> Suspend</Link></li>
-                                                <li><Link to="admin/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
+                                                <li><Link to="/transitions-detail"><AiOutlineEye /> View Details</Link></li>
+                                                <li><Link to="/nfts-detail"><MdBlock /> Suspend</Link></li>
+                                                <li><Link to="/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
                                             </ul>
                                         </div>
                                     </Button>

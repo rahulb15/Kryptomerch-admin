@@ -16,7 +16,7 @@ const BuyerDetail = () => {
             <div className='buyerFilter'>
                 <div className='buyersHd'>Buyer Details</div>
                 <div className='buyersFlt'>
-                    <Link to="admin/ido-buyers" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
+                    <Link to="/ido-buyers" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
                 </div>
             </div>
             <div className='buyerDetailBx'>
@@ -41,9 +41,9 @@ const BuyerDetail = () => {
                             <BsThreeDots />
                             <div className='actionList'>
                                 <ul>
-                                    <li><Link to="admin/buyer-detail"><MdMailOutline /> Send Email</Link></li>
-                                    <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                    <li><Link to="/admin"><MdDeleteOutline /> View Details</Link></li>
+                                    <li><Link to="/buyer-detail"><MdMailOutline /> Send Email</Link></li>
+                                    <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                    <li><Link to="/"><MdDeleteOutline /> View Details</Link></li>
                                 </ul>
                             </div>
                         </Button>

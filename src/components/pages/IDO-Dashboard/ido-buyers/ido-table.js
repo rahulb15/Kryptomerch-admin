@@ -45,9 +45,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -78,9 +78,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -111,9 +111,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -144,9 +144,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -177,9 +177,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -210,9 +210,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -243,9 +243,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>
@@ -276,9 +276,9 @@ export default class IdoTable extends React.Component {
                                 <BsThreeDots />
                                 <div className='actionList'>
                                     <ul>
-                                        <li><Link to="admin/buyer-detail"><AiOutlineEye /> View Details</Link></li>
-                                        <li><Link to="/admin"><MdBlock /> Suspend</Link></li>
-                                        <li><Link to="/admin"><MdDeleteOutline /> Delete </Link></li>
+                                        <li><Link to="/buyer-detail"><AiOutlineEye /> View Details</Link></li>
+                                        <li><Link to="/"><MdBlock /> Suspend</Link></li>
+                                        <li><Link to="/"><MdDeleteOutline /> Delete </Link></li>
                                     </ul>
                                 </div>
                             </Button>

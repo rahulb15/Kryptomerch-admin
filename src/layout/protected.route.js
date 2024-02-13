@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
     let location = useLocation();
 
     if (!isAuth) {
-        return <Navigate to="admin/sign-in" state={{ from: location }} replace />
+        return <Navigate to="/sign-in" state={{ from: location }} replace />
     }
     return children
 
