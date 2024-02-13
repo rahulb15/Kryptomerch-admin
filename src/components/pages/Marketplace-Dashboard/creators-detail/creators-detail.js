@@ -146,7 +146,7 @@ const IdoBuyers = () => {
       <div className="buyerFilter mb-3">
         <div className="buyersHd">Creator Details</div>
         <div className="buyersFlt">
-          <Link to="/creators" className="backBtn">
+          <Link to="admin/creators" className="backBtn">
             <HiArrowNarrowLeft /> Back
           </Link>
         </div>
@@ -205,7 +205,7 @@ const IdoBuyers = () => {
                 <ul>
                   <li>
                     <Link
-                      to={`/creator-detail?id=${creator._id}`}
+                      to={`admin/creator-detail?id=${creator._id}`}
                       onClick={onEmailSubmit}
                     >
                       <MdMailOutline /> Send Email
@@ -213,7 +213,7 @@ const IdoBuyers = () => {
                   </li>
                   <li>
                     <Link
-                      to={`/creator-detail?id=${creator._id}`}
+                      to={`admin/creator-detail?id=${creator._id}`}
                       onClick={onSubmits}
                     >
                       <MdBlock /> Suspend
@@ -224,7 +224,7 @@ const IdoBuyers = () => {
 
                                     ><MdBlock /> Delete</button></li> */}
                   <li>
-                    <Link to="/nfts-detail">
+                    <Link to="admin/nfts-detail">
                       <MdDeleteOutline /> View Details
                     </Link>
                   </li>

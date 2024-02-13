@@ -16,7 +16,7 @@ const IdoBuyers = () => {
             <div className='buyerFilter mb-2'>
                 <div className='buyersHd'>Nfts Details</div>
                 <div className='buyersFlt'>
-                    <Link to="/creators" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
+                    <Link to="admin/creators" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
                 </div>
             </div>
             <Overdetail />

@@ -526,7 +526,7 @@ const IdoTable = () => {
                                 {" "}
                                 <Link
                                   to={{
-                                    pathname: "/collection-detail",
+                                    pathname: "admin/collection-detail",
                                     search: `?id=${data._id}`,
                                   }}
                                 >
@@ -536,7 +536,7 @@ const IdoTable = () => {
                               <li>
                                 <Link
                                   to={{
-                                    pathname: "/nfts-detail",
+                                    pathname: "admin/nfts-detail",
                                   }}
                                 >
                                   <AiOutlineEye /> Delete

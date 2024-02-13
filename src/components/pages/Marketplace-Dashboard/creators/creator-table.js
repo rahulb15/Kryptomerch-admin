@@ -119,7 +119,7 @@ const IdoTable = (props) => {
                       <li>
                         <Link
                           to={{
-                            pathname: "/creator-detail",
+                            pathname: "admin/creator-detail",
                             search: `?id=${data._id}`,
                           }}
                         >

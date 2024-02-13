@@ -15,27 +15,27 @@ const IdoLeftbar = (props) => {
     React.useEffect(() => {
         // setPath(window.location.pathname)
         switch (window.location.pathname) {
-            case "/marketplace-dashboard":
+            case "admin/marketplace-dashboard":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
-            case "/creators":
+            case "admin/creators":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
-            case "/collections":
+            case "admin/collections":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
-            case "/nfts":
+            case "admin/nfts":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
-            case "/merchandise":
+            case "admin/merchandise":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
-            case "/marketplace-setting":
+            case "admin/marketplace-setting":
                 setActive(true)
                 setPath(window.location.pathname)
                 break;
@@ -58,7 +58,7 @@ const IdoLeftbar = (props) => {
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("accessAdminJWT");
                 localStorage.removeItem("persist:root");
-                navigate("/")
+                navigate("/admin")
             } else {
                 swal("Your are not logged out!");
             }
@@ -70,30 +70,30 @@ const IdoLeftbar = (props) => {
             <Nav>
                 <NavItem>
                     {/* <Link href="/marketplace-dashboard" className={path==='/marketplace-dashboard'?'active':''}><AiFillHome /> Dashboard</Link> */}
-                    <Link to="/marketplace-dashboard" className={path === '/marketplace-dashboard' ? 'active' : props.name === 'marketplace-dashboard' ? 'active' : ''}><AiFillHome /> Dashboard</Link>
+                    <Link to="admin/marketplace-dashboard" className={path === 'admin/marketplace-dashboard' ? 'active' : props.name === 'marketplace-dashboard' ? 'active' : ''}><AiFillHome /> Dashboard</Link>
                 </NavItem>
                 <NavItem>
                     {/* <Link href="/creators" className={path==='/creators'?'active': props.name==='creators'?'active':''}><FaUserAlt /> Creators</Link> */}
-                    <Link to="/creators" className={path === '/creators' ? 'active' : props.name === 'creators' ? 'active' : ''}><FaUserAlt /> Creators</Link>
+                    <Link to="admin/creators" className={path === 'admin/creators' ? 'active' : props.name === 'creators' ? 'active' : ''}><FaUserAlt /> Creators</Link>
                 </NavItem>
                 <NavItem>
                     {/* <NavLink href="/collections" className={path==='/collections'?'active':props.name==='collections'?'active':''}><FaSuitcase /> Collections</NavLink> */}
-                    <Link to="/collections" className={path === '/collections' ? 'active' : props.name === 'collections' ? 'active' : ''}><FaSuitcase /> Collections</Link>
+                    <Link to="admin/collections" className={path === 'admin/collections' ? 'active' : props.name === 'collections' ? 'active' : ''}><FaSuitcase /> Collections</Link>
                 </NavItem>
                 <NavItem>
                     {/* <NavLink href="/nfts" className={path==='/nfts'?'active': props.name==='nfts'?'active':''} */}
-                    <Link to="/nfts" className={path === '/nfts' ? 'active' : props.name === 'nfts' ? 'active' : ''}
+                    <Link to="admin/nfts" className={path === 'admin/nfts' ? 'active' : props.name === 'nfts' ? 'active' : ''}
                     ><GiCrownCoin /> Nfts</Link>
                 </NavItem>
                 <NavItem>
                     {/* <NavLink href="#" className={path==='/'?'active':''}
 ><FaTshirt /> Merchandise</NavLink> */}
-                    <Link to="#" className={path === '/merchandise' ? 'active' : props.name === 'merchandise' ? 'active' : ''} ><FaTshirt /> Merchandise</Link>
+                    <Link to="#" className={path === 'admin/merchandise' ? 'active' : props.name === 'merchandise' ? 'active' : ''} ><FaTshirt /> Merchandise</Link>
                 </NavItem>
                 <NavItem>
                     {/* <NavLink href="/marketplace-setting" className={path==='/marketplace-setting'?'active':''} */}
                     {/* ><AiTwotoneSetting /> Settings</NavLink> */}
-                    <Link to="/marketplace-setting" className={path === '/marketplace-setting' ? 'active' : props.name === 'marketplace-setting' ? 'active' : ''} ><AiTwotoneSetting /> Settings</Link>
+                    <Link to="admin/marketplace-setting" className={path === 'admin/marketplace-setting' ? 'active' : props.name === 'marketplace-setting' ? 'active' : ''} ><AiTwotoneSetting /> Settings</Link>
                 </NavItem>
                 <NavItem>
                     <NavLink href="#"

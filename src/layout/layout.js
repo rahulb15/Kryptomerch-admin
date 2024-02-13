@@ -29,31 +29,31 @@ import Nfts from '../components/pages/Marketplace-Dashboard/nfts/nfts';
 const Layout = () => {
     return (
         <Routes>
-            <Route exact path="/sign-in" element={<SignIn />} />
-            <Route path="/" element={<Navigate to="/sign-in" />} />
-            <Route exact path="/forgot-password" element={<ForgotPassword />} />
-            <Route exact path="/verification" element={<Verification />} />
-            <Route exact path="/reset-password" element={<ResetPassword />} />
-            <Route exact path="/reset-sucessfully" element={<ResetSuccessfully />} />
+            <Route exact path="admin/sign-in" element={<SignIn />} />
+            <Route path="/admin" element={<Navigate to="admin/sign-in" />} />
+            <Route exact path="admin/forgot-password" element={<ForgotPassword />} />
+            <Route exact path="admin/verification" element={<Verification />} />
+            <Route exact path="admin/reset-password" element={<ResetPassword />} />
+            <Route exact path="admin/reset-sucessfully" element={<ResetSuccessfully />} />
 
             {/* IDO dashboard */}
-            <Route exact path="/ido-dashboard" element={<ProtectedRoute><IDODashboard /></ProtectedRoute>} />
-            <Route exact path="/ido-buyers" element={<IDOBuyers />} />
-            <Route exact path="/buyer-detail" element={<BuyerDetail />} />
-            <Route exact path="/ido-projects" element={<IdoProjects />} />
-            <Route exact path='/ido-transitions' element={<IdoTransitions />} />
-            <Route exact path='/transitions-detail' element={<TransitionsDetail />} />
-            <Route exact path='/ido-setting' element={<Settings />} />
+            <Route exact path="admin/ido-dashboard" element={<ProtectedRoute><IDODashboard /></ProtectedRoute>} />
+            <Route exact path="admin/ido-buyers" element={<IDOBuyers />} />
+            <Route exact path="admin/buyer-detail" element={<BuyerDetail />} />
+            <Route exact path="admin/ido-projects" element={<IdoProjects />} />
+            <Route exact path='admin/ido-transitions' element={<IdoTransitions />} />
+            <Route exact path='admin/transitions-detail' element={<TransitionsDetail />} />
+            <Route exact path='admin/ido-setting' element={<Settings />} />
 
             {/* Marketplace dashboard */}
-            <Route exact path="/marketplace-dashboard" element={<MarketplaceDashboard />} />
-            <Route exact path="/creators" element={<Creators />} />
-            <Route exact path="/creator-detail" element={<CreatorDetails />} />
-            <Route exact path="/collections" element={<Collections />} />
-            <Route exact path="/collection-detail" element={<CollectionDetail />} />
-            <Route exact path="/nfts" element={<Nfts />} />
-            <Route exact path="/nfts-detail" element={<NftsDetail />} />
-            <Route exact path="/marketplace-setting" element={<MarketplaceSetting />} />
+            <Route exact path="admin/marketplace-dashboard" element={<MarketplaceDashboard />} />
+            <Route exact path="admin/creators" element={<Creators />} />
+            <Route exact path="admin/creator-detail" element={<CreatorDetails />} />
+            <Route exact path="admin/collections" element={<Collections />} />
+            <Route exact path="admin/collection-detail" element={<CollectionDetail />} />
+            <Route exact path="admin/nfts" element={<Nfts />} />
+            <Route exact path="admin/nfts-detail" element={<NftsDetail />} />
+            <Route exact path="admin/marketplace-setting" element={<MarketplaceSetting />} />
         </Routes>
     )
 }

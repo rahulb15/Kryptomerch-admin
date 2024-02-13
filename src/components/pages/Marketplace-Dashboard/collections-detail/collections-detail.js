@@ -215,7 +215,7 @@ const IdoBuyers = () => {
             <div className='buyerFilter mb-3'>
                 <div className='buyersHd'>Collections</div>
                 <div className='buyersFlt'>
-                    <Link to="/creators" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
+                    <Link to="admin/creators" className='backBtn'><HiArrowNarrowLeft /> Back</Link>
                 </div>
             </div>
             <div className='buyerdetOuter'>
@@ -256,9 +256,9 @@ const IdoBuyers = () => {
                             <BsThreeDots />
                             <div className='actionList'>
                                 <ul>
-                                    <li><Link to="/buyer-detail"><MdMailOutline /> Send Email</Link></li>
+                                    <li><Link to="admin/buyer-detail"><MdMailOutline /> Send Email</Link></li>
                                     {/* <li><Link to= {`?id=${collection._id}`} onClick={handleSuspend.bind(this,collection._id)}><MdBlock /> Suspend</Link></li> */}
-                                    <li><Link to="/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
+                                    <li><Link to="admin/nfts-detail"><MdDeleteOutline /> View Details</Link></li>
                                 </ul>
                             </div>
                         </Button>

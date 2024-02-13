@@ -84,7 +84,7 @@ const SignIn = () => {
             }
             dispatch(loginSuccess());
             dispatch(getAdminUserProfile());
-            navigate('/ido-dashboard');
+            navigate('admin/ido-dashboard');
             // if(isAuth){
             //     toast.success("Login Succesfully", {
             //         position: "top-right"
@@ -102,7 +102,7 @@ const SignIn = () => {
     return (
         <div className='signInBx'>
             <div className='signLogo'>
-                <Link to="/"><img src={Logo} alt="" /></Link>
+                <Link to="/admin"><img src={Logo} alt="" /></Link>
             </div>
             <div className='loginFrmBx'>
                 <h2>Sign in</h2>
@@ -127,7 +127,7 @@ const SignIn = () => {
                         </FormGroup>
                     </div>
                     <div className='frgpass'>
-                        <Link to="/forgot-password">Forgot Password?</Link>
+                        <Link to="admin/forgot-password">Forgot Password?</Link>
                     </div>
                 </div>
                 <div className='signBtn'>

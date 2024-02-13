@@ -25,7 +25,7 @@ const IdoLeftbar = () => {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("accessAdminJWT");
         localStorage.removeItem("persist:root");
-        navigate("/");
+        navigate("/admin");
       } else {
         swal("Your are not logged out!");
       }
@@ -36,27 +36,27 @@ const IdoLeftbar = () => {
     <div className="leftbar">
       <Nav>
         <NavItem>
-          <NavLink href="/ido-dashboard" className="active">
+          <NavLink href="admin/ido-dashboard" className="active">
             <AiFillHome /> Dashboard
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/ido-buyers">
+          <NavLink href="admin/ido-buyers">
             <FaUserAlt /> IDO Buyers
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/ido-projects">
+          <NavLink href="admin/ido-projects">
             <FiCodesandbox /> Projects
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/ido-transitions">
+          <NavLink href="admin/ido-transitions">
             <TbArrowsLeftRight /> Transactions
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/ido-setting">
+          <NavLink href="admin/ido-setting">
             <AiTwotoneSetting /> Settings
           </NavLink>
         </NavItem>

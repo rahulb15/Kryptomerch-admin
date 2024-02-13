@@ -16,11 +16,11 @@ const Header = () => {
                 </div>
                 <div className='headerRight'>
                     <div className='head_Heading'>
-                        <Link to='/marketplace-dashboard'
+                        <Link to='admin/marketplace-dashboard'
                             className={title === 'IDO'
                                 // className={title === 'Marketplace' 
                                 ? 'marketplace' : ''}>Marketplace</Link>
-                        <Link to='/ido-dashboard'
+                        <Link to='admin/ido-dashboard'
                             className={title === 'Marketplace'
                                 // className={title === 'IDO' 
                                 ? 'ido' : ''}>IDO</Link>
