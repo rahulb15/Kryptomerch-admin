@@ -30,7 +30,7 @@ const Layout = () => {
     return (
         <Routes>
             <Route exact path="/sign-in" element={<SignIn />} />
-            <Route path="/" element={<Navigate to="/sign-in" />} />
+            <Route path="/admin" element={<Navigate to="/sign-in" />} />
             <Route exact path="/forgot-password" element={<ForgotPassword />} />
             <Route exact path="/verification" element={<Verification />} />
             <Route exact path="/reset-password" element={<ResetPassword />} />
